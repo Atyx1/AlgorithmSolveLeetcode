@@ -1,37 +1,50 @@
 #include <stdio.h>
-
-int main()
-{
-printf("Enter Number (1-10):"); int a;scanf("%d",&a);
-
-//if you enter 7 shape is :
-/*
-77777778
-*6666667
-**555556
-***44445
-****3334
-*****223
-******12
-*******1
-*/
- int say=a; int x=a;
-   for(int i=1;i<=a;i++){
-       for(int j=a-1;j>a-i;j--){
-           say++;
-          printf("*");
-       }
-       for(int z=a;z>=i;z--){
-           say++;
-           if(say%a==0){
-               printf("%d",x);
-           }
-           else{
-               printf("%d",x-1);
-           }
-       }
-       printf("\n");
-       x--;
-   }
-   
+#include <stdlib.h>
+#include <conio.h>
+#include <time.h>
+#include <windows.h>
+ 
+int farkliSayi(int t);
+     
+int main(void){
+	
+	int k=334;
+	printf("Sayi %d",k);
+	int z=farkliSayi(k);
+	printf(" say %d",z);
+	return 0;
 }
+
+int farkliSayi(int t){
+	
+	int a=t%10;
+	int b=(t/10)%10;
+	int c=(t/100)%10;
+	
+	int syc=1;
+	if(a==b){
+		if(a==c){
+		 	
+		}
+		else{
+			syc++;
+		}
+		
+	}
+	else{
+		if(b==c){
+			
+		}
+		else{
+			syc++;
+		}
+	}
+
+	
+	
+		return syc;
+	
+
+	
+}
+
